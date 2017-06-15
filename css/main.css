@@ -1,8 +1,16 @@
 body{
-  background-color: #A1D2BF;
+  background-color: #EAEEC9;
 }
 
 h1{
   color: #E14A1C;
   font-family: 'Syncopate', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
 }

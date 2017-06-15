@@ -18,17 +18,26 @@
   </head>
 
   <body>
+
     <h1>FotoForo</h1>
-    
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-      Crea aquí tu tema +
-    </button>
+
+      <br>
+    <section class="container">
+      <!-- Boton para agregarTema -->
+      <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+        Crea aquí tu tema
+      </button>
+      <!-- Boton para Filtrar Busquedas -->
+      <button type="button" class="btn btn-info btn-lg filtrarTemas" data-toggle="modal" data-target="#myModal">
+        Busca aquí un tema
+      </button>
+    </section>
+      <br>
 
     <table class="table table-striped">
       <thead>
-        <th>AUTOR:</th>
-        <th>ENTRADAS:</th>
+        <th>TEMA Y AUTOR:</th>
+        <th>DETALLES:</th>
         <th>RESPUESTAS:</th>
       </thead>
       <tbody id="tasks-list"></tbody>
@@ -45,19 +54,19 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                  <label for="nombre-autor">Usuario: </label>
-                  <input type="text" class="form-control" id="autor" placeholder="Aquí tu nombre">
+                  <label for="nombre-autor">Datos de usuario: </label>
+                  <input type="text" class="form-control" id="autor" placeholder="Aquí tu nombre...">
                 </div>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                   <label for="nombre-tema">Escribe el tema de tu preferencia: </label>
-                  <input type="text" class="form-control" id="tema" placeholder="Mis ideas justo aqui...">
+                  <input type="text" class="form-control" id="tema" placeholder="Tus ideas justo aqui...">
                 </div>
             </div>
             <div class="modal-footer">
               <button type="buton" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-primary">Envía tu entrada +</button>
+              <button type="submit" class="btn btn-primary">Envía tu entrada</button>
             </div>
           </div>
         </form>
@@ -76,8 +85,6 @@
  						     <span id="name"></span>
  						<h4>Tema: </h4>
  						     <span id="id"></span>
- 						<h4>Fecha de creación: </h4>
- 						     <span id="date"></span>
   					<div class="modal-footer">
  						  <button type="button" class="btn btn-primary close" data-dismiss="modal" aria-label="Close">Aceptar</button>
   					</div>

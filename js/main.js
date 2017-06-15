@@ -17,7 +17,9 @@ var plantillaEntrada = '<tr data-id=__id__>' +
 // Creando la Plantilla de Iconos
 var plantillaIconos=  '<td>' +
           '<span class="glyphicon glyphicon-eye-open"></span>' +
+					'        .        ' +
           '<span class="glyphicon glyphicon-pencil"></span>'+
+					'        .        ' +
           '<span class="glyphicon glyphicon-remove"></span>'+
         	'</td>';
 
@@ -91,15 +93,15 @@ var mostrarInfoTema = function (autor, id) {
  	$("#id").text(id);
 }
 
-//Intanto del filtrado, DESACTIVADO porque desconfigure la entrada de Temas!!!
-// var filtrarTemas = function (e) {
-//     e.preventDefault();
-//     var criterioBusqueda = $("#search").val().toLowerCase();
-//     var temasFiltrados = temas.filter(function (temas) {
-//         return temas.autor.toLowerCase().indexOf(criterioBusqueda) >= 0;
-//     });
-//     mostrarTemas(temasFiltrados);
-// };
+//Intentando el filtrado, pero desconfigure la entrada de Temas!!!
+var filtrarTemas = function (e) {
+    e.preventDefault();
+    var criterioBusqueda = $("#search").val().toLowerCase();
+    var temasFiltrados = temas.filter(function (temas) {
+        return temas.autor.toLowerCase().indexOf(criterioBusqueda) >= 0;
+    });
+    mostrarTemas(temasFiltrados);
+};
 
 
 $(document).on("click", ".glyphicon-eye-open", infoTemas);
