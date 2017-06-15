@@ -1,0 +1,98 @@
+<!-- mostrar en este HTML los TOPICS de /topics -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>FF - FotoForo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <!--Link para CSS-->
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <!--Link para Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+    <!--link para Favicon-->
+    <link rel="shortcut icon" href="assets/img/favicon.jpg">
+
+  </head>
+
+  <body>
+    <h1>FotoForo</h1>
+    
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+      Crea aquí tu tema +
+    </button>
+
+    <table class="table table-striped">
+      <thead>
+        <th>AUTOR:</th>
+        <th>ENTRADAS:</th>
+        <th>RESPUESTAS:</th>
+      </thead>
+      <tbody id="tasks-list"></tbody>
+    </table>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <form id="add-form">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Nueva Entrada al Foro</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="nombre-autor">Usuario: </label>
+                  <input type="text" class="form-control" id="autor" placeholder="Aquí tu nombre">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="nombre-tema">Escribe el tema de tu preferencia: </label>
+                  <input type="text" class="form-control" id="tema" placeholder="Mis ideas justo aqui...">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="buton" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Envía tu entrada +</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-inf" tabindex="-1" role="dialog" aria-labelledby="modal-infLabel">
+ 			<div class="modal-dialog" role="document">
+ 				<div class="modal-content">
+ 					<div class="modal-header">
+ 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ 						<h4 class="modal-title" id="myModalLabel">Informacion de Entradas</h4>
+ 					</div>
+ 					<div class="modal-body">
+ 						<h4>Autor:</h4>
+ 						     <span id="name"></span>
+ 						<h4>Tema: </h4>
+ 						     <span id="id"></span>
+ 						<h4>Fecha de creación: </h4>
+ 						     <span id="date"></span>
+  					<div class="modal-footer">
+ 						  <button type="button" class="btn btn-primary close" data-dismiss="modal" aria-label="Close">Aceptar</button>
+  					</div>
+  				</div>
+  			</div>
+ 		</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+     <!-- enlazando archivos js -->
+    <script src="js/functions.js"></script>
+    <script src="js/main.js"></script>
+
+
+  </body>
+</html>
